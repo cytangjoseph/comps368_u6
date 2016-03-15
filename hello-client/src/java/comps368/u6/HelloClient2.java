@@ -8,7 +8,7 @@ public class HelloClient2 {
         Context context = new InitialContext();
         //"java:global//hello-ejb/Hello" is the Hello ejb's portable JDNI name 
         HelloRemote helloBean = (HelloRemote) 
-                context.lookup("java:global//hello-ejb/Hello");
+                context.lookup("java:global/hello-ejb/Hello");
         System.out.println("uisng JDNI");
         System.out.println(helloBean.greet());
     }    
